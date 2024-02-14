@@ -14,7 +14,7 @@
         in
         nix-bundle.makebootstrap {
           targets = [ script ];
-          startup = "${builtins.unsafeDiscardStringContext script} '\"$@\"'";
+          startup = ".${builtins.unsafeDiscardStringContext script} '\"$@\"'";
         };
     };
 
